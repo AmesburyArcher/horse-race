@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#game-grid-container {
+  height: 100%;
+  width: 75vw;
+  position: absolute;
+  top: 25vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.side-cards {
+  grid-column: 1 / 2;
+  border: 1px solid red;
+}
+
+.main-cards {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid blue;
+  height: 500px;
+}
+
+.card {
+  grid-row: 5 / 7;
+  grid-column: 2/3;
+  height: 75px;
+  width: auto;
+}
+
+.btn {
+  height: 1.5rem;
+}

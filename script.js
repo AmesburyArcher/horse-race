@@ -12,6 +12,15 @@ const aces = [
   { Suit: 'Diamonds', Value: 'Ace' },
 ];
 
+const cardProgress = [0, 0, 0, 0];
+
+const sideCards = [];
+
+let aceSpades = 7;
+let aceClubs = 7;
+let aceHearts = 7;
+let aceDiamonds = 7;
+
 const createDeck = () => {
   let deck = [];
   for (let i = 0; i < suits.length; i++) {
@@ -34,4 +43,17 @@ const shuffleDeck = (deck) => {
     deck[i] = deck[j];
     deck[j] = temp;
   }
+};
+
+const addSideCards = () => {
+  for (let i = 0; i < 5; i++) {
+    sideCards.push(deck[i]);
+  }
+};
+
+const cardBack = (card) => {
+  suit = card.Suit;
+  cardStr = `ace${suit}`;
+  console.log(cardStr);
+  card.style.gridRow = `${cardStr - 1} / ${cardStr}`;
 };
