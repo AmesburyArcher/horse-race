@@ -64,20 +64,11 @@ main {
   background-color: var(--green);
 }
 
-@media only screen and (max-width: 390px) {
-  [class*='.card'] {
-    height: 50px;
-  }
-  [class*='.btn'] {
-    width: fit-content;
-  }
-}
-
-@media only screen and (min-width: 391) {
-  [class*='.card'] {
+@media only screen and (min-width: 768px) {
+  .card {
     height: 75px;
   }
-  [class*='.btn'] {
+  .btn {
     width: 7rem;
   }
 }
@@ -85,6 +76,7 @@ main {
 .card {
   grid-row: 5 / 7;
   grid-column: 2/3;
+  height: 40px;
   width: auto;
 }
 
@@ -98,6 +90,7 @@ main {
 
 .btn {
   height: 2rem;
+  width: fit-content;
   border: none;
   border-radius: 3px;
   padding: 0.15rem;
