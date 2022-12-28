@@ -64,7 +64,7 @@ main {
   background-color: var(--green);
 }
 
-@media only screen and (device-width: 390px) and (device-height: 844px) {
+@media only screen and (max-width: 390px) {
   [class*='.card'] {
     height: 50px;
   }
