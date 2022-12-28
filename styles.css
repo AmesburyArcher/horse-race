@@ -64,6 +64,15 @@ main {
   background-color: var(--green);
 }
 
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  [class*='.card'] {
+    height: 50px;
+  }
+  [class*='.btn'] {
+    width: fit-content;
+  }
+}
+
 .card {
   grid-row: 5 / 7;
   grid-column: 2/3;
