@@ -90,6 +90,10 @@ const init = () => {
 
 const createBoard = (size) => {
   //create the initial deck
+
+  const audio = document.querySelector('.trumpet');
+  audio.play();
+
   const createDeck = () => {
     let deck = [];
     for (let i = 0; i < suits.length; i++) {
@@ -171,19 +175,27 @@ const createBoard = (size) => {
     switch (suit) {
       case 'spades':
         cardProgress[0]++;
-        updateAce(0);
+        setTimeout(function () {
+          updateAce(0);
+        }, 300);
         break;
       case 'clubs':
         cardProgress[1]++;
-        updateAce(1);
+        setTimeout(function () {
+          updateAce(1);
+        }, 300);
         break;
       case 'hearts':
         cardProgress[2]++;
-        updateAce(2);
+        setTimeout(function () {
+          updateAce(2);
+        }, 300);
         break;
       case 'diamonds':
         cardProgress[3]++;
-        updateAce(3);
+        setTimeout(function () {
+          updateAce(3);
+        }, 300);
         break;
     }
     checkProgress();
