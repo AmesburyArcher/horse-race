@@ -198,8 +198,10 @@ const createBoard = (size) => {
         }, 300);
         break;
     }
-    checkProgress();
-    checkWin();
+    setTimeout(function () {
+      checkProgress();
+      checkWin();
+    }, 305);
   };
   const dealBtnFunc = () => {
     drawCard(gameDeck);
